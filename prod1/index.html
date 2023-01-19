@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TShirt prodcut page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #cards{
+            
+            width: 100%;
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px 10px;
+         
+            justify-content: space-between;
+            margin: auto;
+            /* justify-content: space-around; */
+
+            
+        }
+
+        #cards div{
+            /* border: 1px solid blue; */
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            color: rgb(70, 67, 67);
+            font-family: "Kanit", sans-serif;
+            font-family: "Poppins", sans-serif;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            
+        }
+        h4:hover{
+            color: rgb(10, 168, 168);
+        }
+        h4{
+            text-align: center;
+            color: black;
+            
+        }
+        h5{
+        color: blue;
+      }
+      h5:hover{
+        color: rgb(130, 122, 122);
+        text-decoration: underline 2px solid red;
+      }
+
+        #cards div img{
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            margin: auto;
+            /* border: 2px solid red; */
+            overflow: hidden;
+        }
+
+        .cont{
+            display: flex;
+        }
+
+        #cards div button{
+            width: 150px;
+            color: rgb(39, 63, 54);
+            padding: 1%;
+            margin-bottom: 10px;
+            background-color: rgb(200, 231, 241);
+            
+        }
+        #cards div button:hover{
+            background-color: black;
+            cursor: pointer;
+            color: white;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="cards"></div>
+</body>
+</html>
+
+<script>
+
+let data = [
+
+{
+    id: 1,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/c/t/9/l-ntc-t-111-105-new-trends-collection-original-imaf5hyyreufzgz8-bb.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$63.00",
+
+},
+{
+    id: 2,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l1whaq80/t-shirt/i/2/k/xxl-t471hs-nb-eyebogler-original-imagddy7v43yxwbz.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$63.00",
+
+},
+{
+    id: 3,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/h/u/u/xxl-bnvwtrbpolo-pl6-blive-original-imaggcgfnhpyzhwb.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$89.00",
+
+},
+{
+    id: 4,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/v/m/o/xxl-tnvpolo-abs1-tripr-original-imaghgnhkg7hbagp.jpeg?q=70",
+    title: "ASDTT tank top in light heather gray",
+    price: "$111.00",
+
+},
+{
+    id: 5,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l0igvww0/t-shirt/i/g/e/m-bcdz02-black-black-collection-original-imagcaeqqqpggbsb.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$163.00",
+
+},
+{
+    id: 6,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l4zxn680/t-shirt/a/7/c/m-st-colorleaf-navy-smartees-original-imagfs4paqzgkteh.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$84.00",
+
+},
+{
+    id: 7,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/d/h/g/xxl-ts1-vebnor-original-imagkhzrznj6bjzg.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$73.00",
+
+},
+{
+    id: 8,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/t/j/d/s-283013-bewakoof-original-imaghdfaqknp3wfd.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$67.00",
+
+},
+{
+    id: 9,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/r/v/k/m-ausk0165-ausk-original-imaghu9fbhcgf2za.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$93.00",
+
+},
+{
+    id: 10,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/v/5/k/m-st-boxhead-black-smartees-original-imaggegtpgz5dhjj.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$153.00",
+
+},
+
+{
+    id: 11,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/q/y/d/s-ts7-vebnor-original-imaghuk5fztgypzs.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$783.00",
+
+},
+{
+    id: 12,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/k/h/v/-original-imaghgy9cqnqnasc.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$63.00",
+
+},
+{
+    id: 13,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/kziqvm80/t-shirt/p/w/z/s-ausk0100-ausk-original-imagbgdaffgdfze5.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$453.00",
+
+},
+{
+    id: 14,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/9/z/r/s-516917-bewakoof-original-imaghdysvgfft4ux.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$503.00",
+
+},
+{
+    id: 15,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l4d2ljk0/t-shirt/i/b/q/s-askporrgf328328-allen-solly-original-imagfa2397hggx6n.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$403.00",
+
+},
+{
+    id: 16,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l2rwzgw0/t-shirt/m/w/p/3xl-t434hs-rdwh-eyebogler-original-imageffubaqpyz8b.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$20.00",
+
+},
+{
+    id: 17,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/c/z/r/xxl-lh-os-hoodie-hs-pink-44-size-xxl-london-hills-original-imaggth3y4sgsasn.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$103.00",
+
+},
+{
+    id: 18,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/kovsvbk0/t-shirt/x/d/6/xl-fp901-tqh-original-imag38rmgxzqfxt7.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$403.00",
+
+},
+{
+    id: 19,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l33cia80/t-shirt/o/2/l/m-askpcurgfv02327-allen-solly-original-imageajvhng3pffn.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$203.00",
+
+},
+{
+    id: 20,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/kz8qsnk0/t-shirt/z/g/u/l-db1024-12-3bros-original-imagbawkr4vxfa6u.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$67.00",
+
+},
+{
+    id: 21,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/ku8pbbk0/t-shirt/i/w/7/l-ustsh0380-u-s-polo-assn-original-imag7fyjaxwmghf7.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$93.00",
+
+},
+{
+    id: 22,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/j/n/u/-original-imaghhffudjgrqwk.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$83.00",
+
+},
+{
+    id: 23,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l3j2cnk0/t-shirt/2/w/p/l-723-2-5-7-8-ftx-original-imagemgrpafdug8v.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "103.00",
+
+},
+{
+    id: 24,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l3dcl8w0/t-shirt/9/5/z/xxl-t349-bg-new-eyebogler-original-imageg8vmpzpzh2k.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$103.00",
+
+},
+{
+    id: 25,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l3nco7k0/t-shirt/j/j/i/m-askpgrgfj96032-allen-solly-original-imagepxgzhcpbjnw.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$87.00",
+
+},
+{
+    id: 26,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/a/q/v/s-505572-bewakoof-original-imaghcyqvf5meqpd.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: "$78.00",
+
+},
+
+
+]
+
+console.log(data);
+
+  let cards = document.getElementById("cards");
+
+  function displayData() {
+    data.forEach((el) => {
+      let div = document.createElement("div");
+
+      let img = document.createElement("img");
+      img.src = el.img;
+
+
+      let title = document.createElement("h4")
+      title.innerHTML = el.title;
+
+       let discount=document.createElement("h5")
+       discount.textContent="Off 30%"
+
+      let h5 = document.createElement("h4");
+      h5.innerHTML = el.price;
+
+      let add_to_cart=document.createElement("button")
+     add_to_cart.textContent="Add to Cart"
+
+
+      div.append(img,title,h5, discount, add_to_cart );
+      cards.append(div);
+    });
+  }
+
+  displayData();
+
+</script>
