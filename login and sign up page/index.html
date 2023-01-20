@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Navbar</title>
+	<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form>
+					<label for="chk" aria-hidden="true" >Sign up</label>
+					<input type="text" name="txt" placeholder="User name" required="" id="name">
+					<input type="email" name="email" placeholder="Email" required="" id="email">
+					<input type="password" name="pswd" placeholder="Password" required="" id="password">
+					<button>Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form class="form">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" required="" id="Email">
+					<input type="password" name="pswd" placeholder="Password" required="" id="Pass">
+					<button>Login</button>
+				</form>
+			</div>
+	</div>
+</body>
+</html>
+<script>
+
+let formdata = document.querySelector('form');15
+
+let username = document.getElementById('name');
+let useremail = document.getElementById('email');
+let userpass = document.getElementById('password');
+
+formdata.addEventListener('submit', (el)=>{
+  el.preventDefault();
+  let name = username.value;
+  let email = useremail.value;
+  let password = userpass.value;
+
+  localStorage.setItem('account-data', JSON.stringify({ name, email, password }));
+
+  formdata.reset();
+});
+
+
+
+// login page
+
+  let loginForm = document.querySelector('.login');
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let loginemail = document.querySelector('#Email').value;
+        let loginpassword = document.querySelector('#Pass').value;
+
+        let accountData = JSON.parse(localStorage.getItem('account-data'));
+
+        if (accountData && accountData.email === loginemail && accountData.password === loginpassword ) {
+          alert("sucessFull")
+        } else{
+          alert("wrong pasa")
+        }
+      });
+</script>
