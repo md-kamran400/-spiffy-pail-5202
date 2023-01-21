@@ -86,6 +86,7 @@
 </head>
 <body>
 
+    <!-- nav -->
     <div class="cont">
         <div class="left-div">
           <div class="img-s">
@@ -111,9 +112,10 @@
           <i class="fa fa-light fa-bag-shopping cart"></i>
         </div>
       </div>
-      
-
-    <div id="p-sub-c">
+  
+      <!-- nav links -->
+  
+      <div id="p-sub-c">
         <div class="sub-c">
           <div class="red">
             <a href="#">Sale</a>
@@ -136,6 +138,7 @@
           </div>
         </div>
       </div>
+   
 
       
     <div id="cards"></div>
@@ -347,22 +350,15 @@
     price: "$87.00",
 
 },
-{
-    id: 26,
-    name: "watch",
-    img: "https://rukminim1.flixcart.com/image/612/612/k5msb680/watch/w/m/m/4075-bk-fogg-original-imafza6hveu7fjd2.jpeg?q=70",
-    title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$78.00",
-
-},
 
 
 ]
 
-console.log(data);
 
   let cards = document.getElementById("cards");
 
+  let cartArr = JSON.parse(localStorage.getItem('cart')) || [];
+  console.log(cartArr)
   function displayData() {
     data.forEach((el) => {
       let div = document.createElement("div");
@@ -382,6 +378,12 @@ console.log(data);
 
       let add_to_cart=document.createElement("button")
      add_to_cart.textContent="Add to Cart"
+    add_to_cart.addEventListener("click",(e)=>{
+        e.preventDefault();
+        cartArr.push(el)
+        localStorage.setItem("cart",JSON.stringify(cartArr))
+    })
+
 
 
       div.append(img,title,h5, discount, add_to_cart );
