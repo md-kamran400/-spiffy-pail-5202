@@ -36,7 +36,7 @@
             font-family: "Poppins", sans-serif;
             box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
             line-height: 40px;
-            margin-top: 40px;
+            margin-top: 20px;
             
         }
         h4:hover{
@@ -83,6 +83,23 @@
 
         }
 
+        #filter{
+          width: 100%;
+          height: 70px;
+          /* border: 2px solid; */
+          /* padding: 2%; */
+          text-align: center;
+          margin-top: 20px;
+          
+        }
+        #pricesort{
+        width: 150px;
+        height: 40px;
+        background-color: rgb(126, 121, 121);
+        color: black;
+        font-size: 17px;
+        border-radius: 10px;
+        }
 
     </style>
 </head>
@@ -91,7 +108,7 @@
     <div class="cont">
         <div class="left-div">
           <div class="img-s">
-            <img src="cwlogo-removebg-preview.png" alt="" />
+            <a href="../index.html"><img src="cwlogo-removebg-preview.png" alt="" /></a>
           </div>
           <div class="name">
             <div class="name1">
@@ -108,9 +125,9 @@
         </div>
   
         <div class="right">
-          <i class="fa fa-light fa-user user-icon"></i>
-          <i class="fa fa-light fa-heart heart"></i>
-          <i class="fa fa-light fa-bag-shopping cart"></i>
+          <a href="../login and sign up page/login.html"><i class="fa fa-light fa-user user-icon"></i></a>
+        <i class="fa fa-light fa-heart heart"></i>
+        <a href="../cart page/cart.html"><i class="fa fa-light fa-bag-shopping cart"></i></a>
         </div>
       </div>
   
@@ -140,6 +157,15 @@
         </div>
       </div>
 
+      <div id="filter">
+        <select name="role" id="pricesort">
+            <option value="">Sort by Price</option>
+            <option value="htl">High to Low</option>
+            <option value="lth">Low to High</option>
+          </select>
+    
+      </div>
+        
 
 
     <div id="cards"></div>
@@ -155,7 +181,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/c/t/9/l-ntc-t-111-105-new-trends-collection-original-imaf5hyyreufzgz8-bb.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$63.00",
+    price: 555
 
 },
 {
@@ -163,7 +189,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/l1whaq80/t-shirt/i/2/k/xxl-t471hs-nb-eyebogler-original-imagddy7v43yxwbz.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$63.00",
+    price: 75
 
 },
 {
@@ -171,7 +197,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/h/u/u/xxl-bnvwtrbpolo-pl6-blive-original-imaggcgfnhpyzhwb.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$89.00",
+    price: 75
 
 },
 {
@@ -179,7 +205,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/v/m/o/xxl-tnvpolo-abs1-tripr-original-imaghgnhkg7hbagp.jpeg?q=70",
     title: "ASDTT tank top in light heather gray",
-    price: "$111.00",
+    price: 758
 
 },
 {
@@ -187,7 +213,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/l0igvww0/t-shirt/i/g/e/m-bcdz02-black-black-collection-original-imagcaeqqqpggbsb.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$163.00",
+    price: 555
 
 },
 {
@@ -195,7 +221,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/l4zxn680/t-shirt/a/7/c/m-st-colorleaf-navy-smartees-original-imagfs4paqzgkteh.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$84.00",
+    price: 758
 
 },
 {
@@ -203,7 +229,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/d/h/g/xxl-ts1-vebnor-original-imagkhzrznj6bjzg.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$73.00",
+    price: 124
 
 },
 {
@@ -211,7 +237,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/t/j/d/s-283013-bewakoof-original-imaghdfaqknp3wfd.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$67.00",
+    price: 354
 
 },
 {
@@ -219,7 +245,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/r/v/k/m-ausk0165-ausk-original-imaghu9fbhcgf2za.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$93.00",
+    price: 365
 
 },
 {
@@ -227,7 +253,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/v/5/k/m-st-boxhead-black-smartees-original-imaggegtpgz5dhjj.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$153.00",
+    price: 354
 
 },
 
@@ -236,7 +262,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/q/y/d/s-ts7-vebnor-original-imaghuk5fztgypzs.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$783.00",
+    price: 123
 
 },
 {
@@ -244,7 +270,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/k/h/v/-original-imaghgy9cqnqnasc.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$63.00",
+    price: 99
 
 },
 {
@@ -252,7 +278,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/kziqvm80/t-shirt/p/w/z/s-ausk0100-ausk-original-imagbgdaffgdfze5.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$453.00",
+    price: 250
 
 },
 {
@@ -260,7 +286,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/9/z/r/s-516917-bewakoof-original-imaghdysvgfft4ux.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$503.00",
+    price: 354
 
 },
 {
@@ -268,7 +294,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/l4d2ljk0/t-shirt/i/b/q/s-askporrgf328328-allen-solly-original-imagfa2397hggx6n.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$403.00",
+    price: 458
 
 },
 {
@@ -276,7 +302,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/l2rwzgw0/t-shirt/m/w/p/3xl-t434hs-rdwh-eyebogler-original-imageffubaqpyz8b.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$20.00",
+    price: 876
 
 },
 {
@@ -284,7 +310,7 @@ let data = [
     name:"tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/c/z/r/xxl-lh-os-hoodie-hs-pink-44-size-xxl-london-hills-original-imaggth3y4sgsasn.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$103.00",
+    price: 741
 
 },
 {
@@ -292,7 +318,7 @@ let data = [
     name:"tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/kovsvbk0/t-shirt/x/d/6/xl-fp901-tqh-original-imag38rmgxzqfxt7.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$403.00",
+    price: 123
 
 },
 {
@@ -300,7 +326,7 @@ let data = [
     name:"tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/l33cia80/t-shirt/o/2/l/m-askpcurgfv02327-allen-solly-original-imageajvhng3pffn.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$203.00",
+    price: 321
 
 },
 {
@@ -308,7 +334,7 @@ let data = [
     name:"tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/kz8qsnk0/t-shirt/z/g/u/l-db1024-12-3bros-original-imagbawkr4vxfa6u.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$67.00",
+    price: 254
 
 },
 {
@@ -316,7 +342,7 @@ let data = [
     name:"tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/ku8pbbk0/t-shirt/i/w/7/l-ustsh0380-u-s-polo-assn-original-imag7fyjaxwmghf7.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$93.00",
+    price: 412
 
 },
 {
@@ -324,7 +350,7 @@ let data = [
     name:"tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/j/n/u/-original-imaghhffudjgrqwk.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$83.00",
+    price: 658
 
 },
 {
@@ -332,7 +358,7 @@ let data = [
     name:"tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/l3j2cnk0/t-shirt/2/w/p/l-723-2-5-7-8-ftx-original-imagemgrpafdug8v.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "103.00",
+    price: 549
 
 },
 {
@@ -340,7 +366,7 @@ let data = [
     name:"tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/l3dcl8w0/t-shirt/9/5/z/xxl-t349-bg-new-eyebogler-original-imageg8vmpzpzh2k.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$103.00",
+    price: 578
 
 },
 {
@@ -348,7 +374,7 @@ let data = [
     name:"tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/l3nco7k0/t-shirt/j/j/i/m-askpgrgfj96032-allen-solly-original-imagepxgzhcpbjnw.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$87.00",
+    price: 555
 
 },
 {
@@ -356,7 +382,7 @@ let data = [
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/a/q/v/s-505572-bewakoof-original-imaghcyqvf5meqpd.jpeg?q=70",
     title: "DTT tank top in light heather gray",
-    price: "$78.00",
+    price: 316
 
 },
 
@@ -366,9 +392,12 @@ let data = [
 
 let cards = document.getElementById("cards");
 
-let cartArr = JSON.parse(localStorage.getItem('cart')) || []
-console.log(cartArr)
-function displayData() {
+let cartArr = JSON.parse(localStorage.getItem('cart')) || [];
+
+// console.log(cartArr)
+
+function displayData(data) {
+  cards.innerHTML = '';
   data.forEach((el) => {
     let div = document.createElement("div");
 
@@ -383,7 +412,7 @@ function displayData() {
      discount.textContent="Off 30%"
 
     let h5 = document.createElement("h4");
-    h5.innerHTML = el.price;
+    h5.innerHTML = `₹ ${el.price}`;   // `₹ ${el.price}`
 
     let add_to_cart=document.createElement("button")
    add_to_cart.textContent="Add to Cart"
@@ -392,14 +421,31 @@ function displayData() {
       cartArr.push(el)
       localStorage.setItem("cart",JSON.stringify(cartArr))
   })
-
-
-
     div.append(img,title,h5, discount, add_to_cart );
     cards.append(div);
   });
 }
 
-displayData();
+displayData(data);
+
+let sorting = document.getElementById("pricesort")
+// console.log("pricesort")
+sorting.addEventListener("change", (e) => {
+let sortingdata = e.target.value;
+//   console.log(sortingdata)
+console.log(sortingdata);
+if (sortingdata === "lth") {
+  let x = [...data];
+  x.sort((a, b) => a.price - b.price);
+  // console.log(x);
+  displayData(x);
+} else if(sortingdata === 'htl'){
+  let y = [...data];
+  y.sort((a, b) => b.price - a.price);
+  // console.log(y);
+  displayData(y);
+}
+});
+
 
 </script>

@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Product page</title>
+    <link rel="stylesheet" href="shoe.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  />
+    <style>
+        #cards{
+            
+            width: 100%;
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px 10px;
+         
+            justify-content: space-between;
+            margin: auto;
+            /* justify-content: space-around; */
+
+            
+        }
+
+        #cards div{
+            /* border: 1px solid blue; */
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            color: rgb(70, 67, 67);
+            font-family: "Kanit", sans-serif;
+            font-family: "Poppins", sans-serif;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            line-height: 40px;
+            margin-top: 20px;
+            
+        }
+        h4:hover{
+            color: rgb(10, 168, 168);
+        }
+        h4{
+            text-align: center;
+            color: black;
+            
+        }
+        h5{
+        color: blue;
+      }
+      h5:hover{
+        color: rgb(130, 122, 122);
+        text-decoration: underline 2px solid red;
+      }
+
+        #cards div img{
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            margin: auto;
+            /* border: 2px solid red; */
+            overflow: hidden;
+        }
+
+        .cont{
+            display: flex;
+        }
+
+        #cards div button{
+            width: 150px;
+            color: rgb(39, 63, 54);
+            padding: 1%;
+            margin-bottom: 10px;
+            background-color: rgb(200, 231, 241);
+            
+        }
+        #cards div button:hover{
+            background-color: black;
+            cursor: pointer;
+            color: white;
+
+        }
+
+        #filter{
+          width: 100%;
+          height: 70px;
+          /* border: 2px solid; */
+          /* padding: 2%; */
+          text-align: center;
+          margin-top: 20px;
+          
+        }
+        #pricesort{
+        width: 150px;
+        height: 40px;
+        background-color: rgb(126, 121, 121);
+        color: black;
+        font-size: 17px;
+        border-radius: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="cont">
+        <div class="left-div">
+          <div class="img-s">
+            <a href="../index.html"><img src="cwlogo-removebg-preview.png" alt="" /></a>
+          </div>
+          <div class="name">
+            <div class="name1">
+              <h2>WOMEN</h2>
+            </div>
+            <div class="name2">
+              <h2>MEN</h2>
+            </div>
+          </div>
+        </div>
+  
+        <div class="search-bar">
+          <input type="text" name="" placeholder="search for items and brands" />
+        </div>
+  
+        <div class="right">
+        <a href="../checkbox/check.html"><i class="fa fa-light fa-user user-icon"></i></a>
+        <i class="fa fa-light fa-heart heart"></i>
+       <a href="../cart page/cart.html"> <i class="fa fa-light fa-bag-shopping cart"></i></a>
+        </div>
+      </div>
+  
+      <!-- nav links -->
+  
+      <div id="p-sub-c">
+        <div class="sub-c">
+          <div class="red">
+            <a href="#">Sale</a>
+          </div>
+          <a  href="#">new in</a>
+          <a href="#">Clothing</a>
+          <a href="#">Brand</a>
+          <a href="#">Shoes</a>
+          <a href="#">Activewear</a>
+          <a href="#">Tailoring</a>
+          <a href="#">Accessories</a>
+          <a href="#">Winter</a>
+          <a href="#">Topman</a>
+          <a href="#">Face+Body</a>
+          <div class="red">
+            <a href="#">Outlet</a>
+          </div>
+          <div class="red">
+            <a href="#">Marketplace</a>
+          </div>
+        </div>
+      </div>
+    
+    <div class="cont">
+        
+        <div id="filter">
+            <select name="role" id="pricesort">
+                <option value="">Sort by Price</option>
+                <option value="htl">High to Low</option>
+                <option value="lth">Low to High</option>
+              </select>
+        </div>
+        
+
+    </div>
+
+
+    <div id="cards"></div>  
+</body>
+</html>
+<script>
+
+let data = [
+
+{
+    id: 1,
+   
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/t/p/q/-original-imagfpz8vnckknu9-bb.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    name: "shoes",
+    price: 63
+
+},
+{
+    id: 2,
+    name: "shoes",
+    img: "https://images.asos-media.com/products/kickers-lennon-boat-shoes-in-red-suede-exclusive-to-asos/203304340-2?$n_480w$&wid=476&fit=constrain",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 63
+
+},
+{
+    id: 3,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/j/z/m/6-9273-6-world-wear-footwear-black-original-imagghh9cgkfmr2x-bb.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 89
+
+},
+{
+    id: 4,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/n/z/4/-original-imagg7ezkmnuvbj6.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 111
+
+},
+{
+    id: 5,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/l45xea80/shoe/d/i/h/-original-imagf4fhq6z8wurq.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 163
+
+},
+{
+    id: 6,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/z/u/1/6-9323-6-world-wear-footwear-green-original-imaggp4zjrjfguxz.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 84
+
+},
+{
+    id: 7,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/5/t/q/9-w-5011-9-world-wear-footwear-red-original-imaggjkfjjxxz6yp.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 73
+
+},
+{
+    id: 8,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/k7z3afk0/shoe/x/2/2/sx0500g-8-sparx-blackgolden-original-imafq3jtrdykr32p.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 67
+
+},
+{
+    id: 9,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/l0igvww0/shoe/j/x/z/7-brd-678-7-birde-blue-original-imagca7bcj6p99gw.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 93
+
+},
+{
+    id: 10,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/l/u/c/10-8050-black-red-waan-black-red-original-imag5psezyhhwwks-bb.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 153
+
+},
+
+{
+    id: 11,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/kb9ou4w0/shoe/y/3/l/11391306-40-u-s-polo-assn-white-original-imafsnet6t3yhrge.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 783
+
+},
+{
+    id: 12,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/t/s/p/-original-imaggcb3ge8rmdaw.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 63
+
+},
+{
+    id: 13,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/z/q/f/-original-imagg6r23p7depkr.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 453
+
+},
+{
+    id: 14,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/q/g/v/-original-imaghrbym6rctdvx.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 503
+
+},
+{
+    id: 15,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/l0zm64w0/shoe/g/u/6/12-ga1101-12-adidas-conavy-sonink-orarus-original-imagcns4uztgkkey.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 403
+
+},
+{
+    id: 16,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/n/l/n/-original-imagg7syfgdgvvac.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 20
+
+},
+{
+    id: 17,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/s/9/o/7-mrj1974-7-aadi-black-orange-natural-original-imaggyeragfwygxa.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 103
+
+},
+{
+    id: 18,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/x/8/c/6-370791-6-puma-black-salmon-original-imaggjmuzjwqfhaz.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 403
+
+},
+{
+    id: 19,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/e/u/g/-original-imagg6h2pw4qgykx.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 203
+
+},
+{
+    id: 20,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/s/9/b/-original-imagg6r9cffj8sja.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 67.0,
+
+},
+{
+    id: 21,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/j/w/a/-original-imaghqzqfvzzk4yg.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 93.0
+
+},
+{
+    id: 22,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/e/k/7/-original-imagf255bjgnx6sk-bb.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 83.0
+
+},
+{
+    id: 23,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/1/y/7/-original-imaggcb3kyzqyqzg.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 300
+
+},
+{
+    id: 24,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/r/k/y/-original-imagg6qzc7hzf9g5.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 103
+
+},
+{
+    id: 25,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/l15bxjk0/shoe/z/n/m/11-193359-11-puma-black-dark-shadow-high-risk-red-original-imagcrvh5jtuzuz9.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 87.0,
+
+},
+{
+    id: 26,
+    name: "shoes",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/e/d/g/7-mrj1992-7-aadi-white-black-yellow-original-imagg3kryyszam65.jpeg?q=70",
+    title: "ASOS DESIGN boat shoe in black leather on white wedge sole",
+    price: 78.0,
+
+},
+
+
+]
+
+
+let cards = document.getElementById("cards");
+
+let cartArr = JSON.parse(localStorage.getItem('cart')) || [];
+
+// console.log(cartArr)
+
+function displayData(data) {
+  cards.innerHTML = '';
+  data.forEach((el) => {
+    let div = document.createElement("div");
+
+    let img = document.createElement("img");
+    img.src = el.img;
+
+
+    let title = document.createElement("h4")
+    title.innerHTML = el.title;
+
+     let discount=document.createElement("h5")
+     discount.textContent="Off 30%"
+
+    let h5 = document.createElement("h4");
+    h5.innerHTML = `₹ ${el.price}`;   // `₹ ${el.price}`
+
+    let add_to_cart=document.createElement("button")
+   add_to_cart.textContent="Add to Cart"
+  add_to_cart.addEventListener("click",(e)=>{
+      e.preventDefault();
+      cartArr.push(el)
+      localStorage.setItem("cart",JSON.stringify(cartArr))
+  })
+    div.append(img,title,h5, discount, add_to_cart );
+    cards.append(div);
+  });
+}
+
+displayData(data);
+
+let sorting = document.getElementById("pricesort")
+// console.log("pricesort")
+sorting.addEventListener("change", (e) => {
+let sortingdata = e.target.value;
+//   console.log(sortingdata)
+console.log(sortingdata);
+if (sortingdata === "lth") {
+  let x = [...data];
+  x.sort((a, b) => a.price - b.price);
+  // console.log(x);
+  displayData(x);
+} else if(sortingdata === 'htl'){
+  let y = [...data];
+  y.sort((a, b) => b.price - a.price);
+  // console.log(y);
+  displayData(y);
+}
+});
+
+
+</script>

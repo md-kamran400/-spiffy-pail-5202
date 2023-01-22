@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watch Product page</title>
     <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <style>
          #cards{
             
@@ -14,7 +18,6 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px 10px;
-         
             justify-content: space-between;
             margin: auto;
             /* justify-content: space-around; */
@@ -24,6 +27,8 @@
 
         #cards div{
             /* border: 1px solid blue; */
+            /* margin-top: 60px; */
+            line-height: 40px;
             width: 90%;
             margin: auto;
             text-align: center;
@@ -77,8 +82,26 @@
         #cards div button:hover{
             background-color: black;
             cursor: pointer;
-            color: white;
+            color: rgb(100, 100, 100);
 
+        }
+
+        #filter{
+          width: 100%;
+          height: 70px;
+          /* border: 2px solid; */
+          /* padding: 2%; */
+          text-align: center;
+          margin-top: 20px;
+          
+        }
+        #pricesort{
+        width: 150px;
+        height: 40px;
+        background-color: rgb(126, 121, 121);
+        color: black;
+        font-size: 17px;
+        border-radius: 10px;
         }
 
 
@@ -90,7 +113,7 @@
     <div class="cont">
         <div class="left-div">
           <div class="img-s">
-            <img src="cwlogo-removebg-preview.png" alt="" />
+           <a href="../index.html"> <img src="cwlogo-removebg-preview.png" alt="" /></a>
           </div>
           <div class="name">
             <div class="name1">
@@ -107,9 +130,9 @@
         </div>
   
         <div class="right">
-          <i class="fa fa-light fa-user user-icon"></i>
-          <i class="fa fa-light fa-heart heart"></i>
-          <i class="fa fa-light fa-bag-shopping cart"></i>
+        <a href="../login and sign up page/login.html"><i class="fa fa-light fa-user user-icon"></i></a>
+        <i class="fa fa-light fa-heart heart"></i>
+        <a href="../cart page/cart.html"><i class="fa fa-light fa-bag-shopping cart"></i></a>
         </div>
       </div>
   
@@ -120,7 +143,7 @@
           <div class="red">
             <a href="#">Sale</a>
           </div>
-          <a href="#">new in</a>
+          <a  href="#">new in</a>
           <a href="#">Clothing</a>
           <a href="#">Brand</a>
           <a href="#">Shoes</a>
@@ -138,9 +161,16 @@
           </div>
         </div>
       </div>
-   
+      <div id="filter">
+        <select name="role" id="pricesort">
+            <option value="">Sort by Price</option>
+            <option value="htl">High to Low</option>
+            <option value="lth">Low to High</option>
+          </select>
+    
+      </div>
 
-      
+     
     <div id="cards"></div>
 
 
@@ -154,31 +184,28 @@
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/k48rwcw0/watch/d/z/y/gents-exclusive-3-designer-combo-rizzly-original-imaf5pu2gyaznhmc.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$63.00",
-
+    price: 124
 },
 {
     id: 2,
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/l4bn5ow0/watch/i/x/c/1-men-s-steel-chain-rb02-silver-black-daniel-jubile-men-original-imagf92rxeqpbeyy.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$63.00",
-
+    price: 199
 },
 {
     id: 3,
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/kerfl3k0pkrrdj/watch/2/5/r/1170-bl-br-fogg-original-imafvhvvagrufhkw.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$89.00",
-
+    price: 549
 },
 {
     id: 4,
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/ktszgy80/watch/h/o/t/3-new-stylish-avenger-dial-and-with-black-led-and-bracelet-watch-original-imag72kc5bpjyydz.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$111.00",
+    price: 339
 
 },
 {
@@ -186,7 +213,7 @@
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/l4hcx3k0/watch/l/q/b/1-diamond-prism-glass-two-love-heart-dial-black-leather-watch-original-imagfczg9fghfqdh.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$163.00",
+    price: 685
 
 },
 {
@@ -194,39 +221,35 @@
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/krxtrww0/watch/e/7/f/g662-casio-original-imaeymgpefzzknhy.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$84.00",
-
+    price: 254
 },
 {
     id: 7,
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/kg8avm80-0/watch/f/f/7/vh000007e-van-heusen-original-imafwgaanvwnh8p3.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$73.00",
-
+    price: 422
 },
 {
     id: 8,
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/k1nw9zk0/watch/m/f/4/bt7118-britex-original-imafjskrhdvhrff7.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$67.00",
-
+    price: 785
 },
 {
     id: 9,
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/kflftzk0pkrrdj-0/watch/e/r/0/gmarks-1384-army-skmei-original-imafw3anrzfgsanz.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$93.00",
-
+    price: 999
 },
 {
     id: 10,
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/kjvrdzk0/watch/f/e/z/ls2917-limestone-original-imafzcv7hhkztdmf.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$153.00",
+    price: 582
 
 },
 
@@ -235,7 +258,7 @@
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/jwzabgw0/watch/c/h/g/ls2821-limestone-original-imafhjcr3xkxgqaz.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$783.00",
+    price: 124
 
 },
 {
@@ -243,15 +266,14 @@
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/k1pbpu80/watch/c/r/d/g986-casio-original-imafh7p7fphxswhc.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$63.00",
-
+    price: 99
 },
 {
     id: 13,
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/jvzkb680/watch/p/3/j/g943-casio-original-imafgrmtt4p5zwh2.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$453.00",
+    price: 365
 
 },
 {
@@ -259,7 +281,7 @@
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/kuwzssw0/watch/b/3/d/1-ls2978-limestone-men-original-imag7xhmgh9zyr6z.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$503.00",
+    price: 145
 
 },
 {
@@ -267,7 +289,7 @@
     name:  "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/ku2zjww0/watch/t/m/x/g1146-gbd-200-1dr-casio-men-original-imag79yfwuy9xv37.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$403.00",
+    price: 658
 
 },
 { 
@@ -275,15 +297,14 @@
     name: "tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/kdeum4w0/watch/t/a/3/stylish-espoir-original-imafubhzycfryfuc.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$20.00",
-
+    price: 324
 },
 {   
     id: 17,
     name:"tshirt",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/watch/k/l/x/2-brand-a-digital-watch-with-square-led-shockproof-multi-original-imagha9hmrbvn4kg.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$103.00",
+    price: 758
 
 },
 {
@@ -291,7 +312,7 @@
     name: "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/k4rcmfk0pkrrdj/watch-refurbished/x/c/z/c-ng38003pp13j-fastrack-original-imaf9fb29vyqqagh.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$403.00",
+    price: 124
 
 },
 {
@@ -299,7 +320,7 @@
     name: "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/kg8avm80-0/watch/l/b/k/vh000008d-van-heusen-original-imafwgaags54snfa.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$203.00",
+    price: 139
 
 },
 {
@@ -307,39 +328,35 @@
     name: "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/kn3i1zk0/watch/r/3/h/blue22557-skmei-original-imafw3azf8kgert3.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$67.00",
-
+    price: 524
 },
 {
     id: 21,
     name: "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/xif0q/watch/e/h/s/1-8172sp01-sonata-women-original-imaggzy93znffb6e.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$93.00",
-
+    price: 145
 },
 {
     id: 22,
     name: "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/l111lzk0/watch/v/s/q/1-ls3078-limestone-men-original-imagczvfygcytff4.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$83.00",
-
+    price: 354
 },
 {
     id: 23,
     name: "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/jzk5xu80/watch/q/k/z/38024pp53-fastrack-original-imafjjq4udfx7vdh.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "103.00",
-
+    price: 789
 },
 {
     id: 24,
     name: "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/kk5rgy80/watch/z/v/t/g1057-ga-900-1adr-casio-original-imafzkgr5hzguxtf.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$103.00",
+    price: 587
 
 },
 {
@@ -347,8 +364,7 @@
     name: "watch",
     img: "https://rukminim1.flixcart.com/image/612/612/ku2zjww0/watch/d/r/w/g1137-gba-900-4adr-casio-men-original-imag79yfbrvgqsp2.jpeg?q=70",
     title: "ASOS DESIGN skinny bracelet watch in gunmetal",
-    price: "$87.00",
-
+    price: 145
 },
 
 
@@ -358,8 +374,11 @@
   let cards = document.getElementById("cards");
 
   let cartArr = JSON.parse(localStorage.getItem('cart')) || [];
-  console.log(cartArr)
-  function displayData() {
+
+  // console.log(cartArr)
+
+  function displayData(data) {
+    cards.innerHTML = '';
     data.forEach((el) => {
       let div = document.createElement("div");
 
@@ -374,7 +393,7 @@
        discount.textContent="Off 30%"
 
       let h5 = document.createElement("h4");
-      h5.innerHTML = el.price;
+      h5.innerHTML = `₹ ${el.price}`;
 
       let add_to_cart=document.createElement("button")
      add_to_cart.textContent="Add to Cart"
@@ -383,14 +402,30 @@
         cartArr.push(el)
         localStorage.setItem("cart",JSON.stringify(cartArr))
     })
-
-
-
       div.append(img,title,h5, discount, add_to_cart );
       cards.append(div);
     });
   }
 
-  displayData();
+  displayData(data);
+
+  let sorting = document.getElementById("pricesort")
+// console.log("pricesort")
+sorting.addEventListener("change", (e) => {
+  let sortingdata = e.target.value;
+//   console.log(sortingdata)
+  console.log(sortingdata);
+  if (sortingdata === "lth") {
+    let x = [...data];
+    x.sort((a, b) => a.price - b.price);
+    // console.log(x);
+    displayData(x);
+  } else if(sortingdata === 'htl'){
+    let y = [...data];
+    y.sort((a, b) => b.price - a.price);
+    // console.log(y);
+    displayData(y);
+  }
+});
 
 </script>
