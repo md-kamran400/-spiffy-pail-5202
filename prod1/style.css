@@ -10,6 +10,94 @@
   /* font-weight: bold; */
 }
 
+#cards{
+            
+    width: 100%;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 10px;
+ 
+    justify-content: space-between;
+    margin: auto;
+    
+    /* justify-content: space-around; */
+
+    
+}
+
+#cards div{
+    /* border: 1px solid blue; */
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: rgb(70, 67, 67);
+    font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    
+}
+h4:hover{
+    color: rgb(10, 168, 168);
+}
+h4{
+    text-align: center;
+    color: black;
+    
+}
+h5{
+color: blue;
+}
+h5:hover{
+color: rgb(130, 122, 122);
+text-decoration: underline 2px solid red;
+}
+
+#cards div img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    margin: auto;
+    /* border: 2px solid red; */
+    overflow: hidden;
+}
+
+.cont{
+    display: flex;
+}
+
+#cards div button{
+    width: 150px;
+    color: rgb(39, 63, 54);
+    padding: 1%;
+    margin-bottom: 10px;
+    background-color: rgb(200, 231, 241);
+    
+}
+#cards div button:hover{
+    background-color: black;
+    cursor: pointer;
+    color: white;
+
+}
+
+
+
+
+/* for only navbar ignore the others */
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  font-family: "Poppins", sans-serif;
+  /* font-family: 'Rubik', sans-serif; */
+  /* font-weight: bold; */
+}
+
 .cont {
   /* border: 2px solid red;/ */
   margin-top: 1px;
@@ -867,41 +955,4 @@ hr{
    color: rgb(153, 153, 156);
    margin: auto;
    margin-left: -10px;
-}
-
-
-/* hover ecceft of navbar css properties */
-
-#hov_Eff_furn,
-
-#hov_Eff_sec {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 70% !important;
-  margin: 0 15vh;
-  gap: 10px;
-  padding: 10px;
-  visibility: hidden;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  position: fixed;
-  z-index: 999;
-  top: 21%;
-  line-height: 1.5;
-  margin-top: -25px;
-}
-
-#hov_Eff_sec {
-  background-color: rgb(199, 194, 194);
-  background-color: #a8b4f6;
-
-}
-
-#imgdiv div{
-  /* border: 1pc solid black; */
-  width: 300px;
-  height: 400px;
-}
-#imgdiv div img{
-  width: 100%;
 }

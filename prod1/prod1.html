@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TShirt prodcut page</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <style>
+        #cards{
+            
+            width: 100%;
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px 10px;
+         
+            justify-content: space-between;
+            margin: auto;
+            /* justify-content: space-around; */
+
+            
+        }
+
+        #cards div{
+            /* border: 1px solid blue; */
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            color: rgb(70, 67, 67);
+            font-family: "Kanit", sans-serif;
+            font-family: "Poppins", sans-serif;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            line-height: 40px;
+            margin-top: 20px;
+            
+        }
+        h4:hover{
+            color: rgb(10, 168, 168);
+        }
+        h4{
+            text-align: center;
+            color: black;
+            
+        }
+        h5{
+        color: blue;
+      }
+      h5:hover{
+        color: rgb(130, 122, 122);
+        text-decoration: underline 2px solid red;
+      }
+
+        #cards div img{
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            margin: auto;
+            /* border: 2px solid red; */
+            overflow: hidden;
+        }
+
+        .cont{
+            display: flex;
+        }
+
+        #cards div button{
+            width: 150px;
+            color: rgb(39, 63, 54);
+            padding: 1%;
+            margin-bottom: 10px;
+            background-color: rgb(200, 231, 241);
+            
+        }
+        #cards div button:hover{
+            background-color: black;
+            cursor: pointer;
+            color: white;
+
+        }
+
+        #filter{
+          width: 100%;
+          height: 70px;
+          /* border: 2px solid; */
+          /* padding: 2%; */
+          text-align: center;
+          margin-top: 20px;
+          
+        }
+        #pricesort{
+        width: 150px;
+        height: 40px;
+        background-color: rgb(126, 121, 121);
+        color: black;
+        font-size: 17px;
+        border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="cont">
+        <div class="left-div">
+          <div class="img-s">
+            <a href="../index.html"><img src="cwlogo-removebg-preview.png" alt="" /></a>
+          </div>
+          <div class="name">
+            <div class="name1">
+              <h2>WOMEN</h2>
+            </div>
+            <div class="name2">
+              <h2>MEN</h2>
+            </div>
+          </div>
+        </div>
+  
+        <div class="search-bar">
+          <input type="text" name="" placeholder="search for items and brands" />
+        </div>
+  
+        <div class="right">
+          <a href="../login and sign up page/login.html"><i class="fa fa-light fa-user user-icon"></i></a>
+        <i class="fa fa-light fa-heart heart"></i>
+        <a href="../cart page/cart.html"><i class="fa fa-light fa-bag-shopping cart"></i></a>
+        </div>
+      </div>
+  
+      <!-- nav links -->
+  
+      <div id="p-sub-c">
+        <div class="sub-c">
+          <div class="red">
+            <a href="#">Sale</a>
+          </div>
+          <a href="#">new in</a>
+          <a href="#">Clothing</a>
+          <a href="#">Brand</a>
+          <a href="#">Shoes</a>
+          <a href="#">Activewear</a>
+          <a href="#">Tailoring</a>
+          <a href="#">Accessories</a>
+          <a href="#">Winter</a>
+          <a href="#">Topman</a>
+          <a href="#">Face+Body</a>
+          <div class="red">
+            <a href="#">Outlet</a>
+          </div>
+          <div class="red">
+            <a href="#">Marketplace</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="filter">
+        <select name="role" id="pricesort">
+            <option value="">Sort by Price</option>
+            <option value="htl">High to Low</option>
+            <option value="lth">Low to High</option>
+          </select>
+    
+      </div>
+        
+
+
+    <div id="cards"></div>
+</body>
+</html>
+
+<script>
+
+let data = [
+
+{
+    id: 26,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/c/t/9/l-ntc-t-111-105-new-trends-collection-original-imaf5hyyreufzgz8-bb.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 555
+
+},
+{
+    id: 27,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l1whaq80/t-shirt/i/2/k/xxl-t471hs-nb-eyebogler-original-imagddy7v43yxwbz.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 75
+
+},
+{
+    id: 28,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/h/u/u/xxl-bnvwtrbpolo-pl6-blive-original-imaggcgfnhpyzhwb.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 75
+
+},
+{
+    id: 29,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/v/m/o/xxl-tnvpolo-abs1-tripr-original-imaghgnhkg7hbagp.jpeg?q=70",
+    title: "ASDTT tank top in light heather gray",
+    price: 758
+
+},
+{
+    id: 30,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l0igvww0/t-shirt/i/g/e/m-bcdz02-black-black-collection-original-imagcaeqqqpggbsb.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 555
+
+},
+{
+    id: 31,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l4zxn680/t-shirt/a/7/c/m-st-colorleaf-navy-smartees-original-imagfs4paqzgkteh.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 758
+
+},
+{
+    id: 32,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/d/h/g/xxl-ts1-vebnor-original-imagkhzrznj6bjzg.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 124
+
+},
+{
+    id: 33,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/t/j/d/s-283013-bewakoof-original-imaghdfaqknp3wfd.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 354
+
+},
+{
+    id: 34,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/r/v/k/m-ausk0165-ausk-original-imaghu9fbhcgf2za.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 365
+
+},
+{
+    id: 35,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/v/5/k/m-st-boxhead-black-smartees-original-imaggegtpgz5dhjj.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 354
+
+},
+
+{
+    id: 36,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/q/y/d/s-ts7-vebnor-original-imaghuk5fztgypzs.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 123
+
+},
+{
+    id: 37,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/k/h/v/-original-imaghgy9cqnqnasc.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 99
+
+},
+{
+    id: 38,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/kziqvm80/t-shirt/p/w/z/s-ausk0100-ausk-original-imagbgdaffgdfze5.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 250
+
+},
+{
+    id: 39,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/9/z/r/s-516917-bewakoof-original-imaghdysvgfft4ux.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 354
+
+},
+{
+    id: 40,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l4d2ljk0/t-shirt/i/b/q/s-askporrgf328328-allen-solly-original-imagfa2397hggx6n.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 458
+
+},
+{
+    id: 41,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l2rwzgw0/t-shirt/m/w/p/3xl-t434hs-rdwh-eyebogler-original-imageffubaqpyz8b.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 876
+
+},
+{
+    id: 42,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/c/z/r/xxl-lh-os-hoodie-hs-pink-44-size-xxl-london-hills-original-imaggth3y4sgsasn.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 741
+
+},
+{
+    id: 43,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/kovsvbk0/t-shirt/x/d/6/xl-fp901-tqh-original-imag38rmgxzqfxt7.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 123
+
+},
+{
+    id: 44,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l33cia80/t-shirt/o/2/l/m-askpcurgfv02327-allen-solly-original-imageajvhng3pffn.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 321
+
+},
+{
+    id: 45,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/kz8qsnk0/t-shirt/z/g/u/l-db1024-12-3bros-original-imagbawkr4vxfa6u.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 254
+
+},
+{
+    id: 46,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/ku8pbbk0/t-shirt/i/w/7/l-ustsh0380-u-s-polo-assn-original-imag7fyjaxwmghf7.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 412
+
+},
+{
+    id: 47,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/j/n/u/-original-imaghhffudjgrqwk.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 658
+
+},
+{
+    id: 48,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l3j2cnk0/t-shirt/2/w/p/l-723-2-5-7-8-ftx-original-imagemgrpafdug8v.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 549
+
+},
+{
+    id: 49,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l3dcl8w0/t-shirt/9/5/z/xxl-t349-bg-new-eyebogler-original-imageg8vmpzpzh2k.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 578
+
+},
+{
+    id: 50,
+    name:"tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/l3nco7k0/t-shirt/j/j/i/m-askpgrgfj96032-allen-solly-original-imagepxgzhcpbjnw.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 555
+
+},
+{
+    id: 51,
+    name: "tshirt",
+    img: "https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/a/q/v/s-505572-bewakoof-original-imaghcyqvf5meqpd.jpeg?q=70",
+    title: "DTT tank top in light heather gray",
+    price: 316
+
+},
+
+]
+
+// console.log(data);
+
+let cards = document.getElementById("cards");
+
+let cartArr = JSON.parse(localStorage.getItem('cart')) || [];
+
+// console.log(cartArr)
+
+function displayData(data) {
+  cards.innerHTML = '';
+  data.forEach((el) => {
+    let div = document.createElement("div");
+
+    let img = document.createElement("img");
+    img.src = el.img;
+
+
+    let title = document.createElement("h4")
+    title.innerHTML = el.title;
+
+     let discount=document.createElement("h5")
+     discount.textContent="Off 30%"
+
+    let h5 = document.createElement("h4");
+    h5.innerHTML = `₹ ${el.price}`;   // `₹ ${el.price}`
+
+    let add_to_cart=document.createElement("button")
+   add_to_cart.textContent="Add to Cart"
+  add_to_cart.addEventListener("click",(e)=>{
+      e.preventDefault();
+      cartArr.push(el)
+      localStorage.setItem("cart",JSON.stringify(cartArr))
+  })
+    div.append(img,title,h5, discount, add_to_cart );
+    cards.append(div);
+  });
+}
+
+displayData(data);
+
+let sorting = document.getElementById("pricesort")
+// console.log("pricesort")
+sorting.addEventListener("change", (e) => {
+let sortingdata = e.target.value;
+//   console.log(sortingdata)
+console.log(sortingdata);
+if (sortingdata === "lth") {
+  let x = [...data];
+  x.sort((a, b) => a.price - b.price);
+  // console.log(x);
+  displayData(x);
+} else if(sortingdata === 'htl'){
+  let y = [...data];
+  y.sort((a, b) => b.price - a.price);
+  // console.log(y);
+  displayData(y);
+}
+});
+
+
+</script>
